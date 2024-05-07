@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="getbalace" method="get">
+    <h1>User Details</h1>
+    <table border="1px" style="border-color: black;">
+        <thead>
+            <tr>
+
+                <th>Balance</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>  
+                <td th:text="${user.userid}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </form>
+    
+    <p></p>
+    <p></p>
+    <p></p>
+    <br>
+    <form action="addmoney" method="post">
+        <input type="submit" value="Add money">
+    </form>
+</body>
+</html>
