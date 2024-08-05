@@ -49,7 +49,11 @@ public class UserController {
     }
         
     @PostMapping("/validate")
+	
     public String LoginUser(@RequestParam("email") String email, @RequestParam("password") String password){
+	    if(email==null){
+		    return "wrongcreds";
+	    }
          if (serviceImpl.LoginUsers(email, password) == true){
             return "userpage";
      }
